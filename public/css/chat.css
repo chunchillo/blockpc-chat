@@ -1,0 +1,20 @@
+body { 
+    background: url("../img/login-register.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.chat {
+    background-color: transparent !important;
+    border: none !important;
+}
+#messageArea {
+    display: flex;
+    flex-direction: column-reverse;
+    height: calc(100vh - 344px); /* space for fixed navbar (48px), "main" title (71px), footer (53px) */
+    overflow-y: scroll; /* vertical scroll for the message feed */
+}
+.bottom {
+    bottom: 0;
+}

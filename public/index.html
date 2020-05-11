@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
     <title>Login | BlockPc</title>
 </head>
-<body>
-    <div class="container text-center">
-        <h1><img src="img/blockpc450x225.png" alt="Login BlockPC" height="70"> Login BlockPC</h1>
-        <div class="row">
-            <div class="col-6 mx-auto">
-                <form action="chat.html" target="_blank">
-                    <div class="form-group">
-                        <label for="nombre">Tu Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombreHelp">
-                        <small id="nombreHelp" class="form-text text-muted">Ingresa tu nombre para participar.</small>
+<body class="d-flex flex-column h-100">
+    <div class="container h-100" id="bg-index">
+        <div class="row h-100">
+            <div class="col-12 col-sm-6 mx-auto mt-5">
+                <h3 class="text-center"><img src="img/blockpc450x225.png" alt="Login BlockPC" height="70"> Chat BlockPC</h3>
+                <div class="card login">
+                    <div class="card-body">
+                        <form action="chat.html" target="_blank">
+                            <div class="form-group">
+                                <label for="nombre">Tu Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombreHelp" placeholder="Ingresa tu nombre para participar">
+                                <small id="nombreHelp" class="form-text text-muted">Ingresa tu nombre para participar.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="sala">Sala de Chat</label>
+                                <input type="text" class="form-control" name="sala" id="sala" aria-describedby="salaHelp" placeholder="Escribe el nombre de la sala de chat">
+                                <small id="salaHelp" class="form-text text-muted">Escribe el nombre de la sala de chat.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="sala">Sala de Chat</label>
-                        <input type="text" class="form-control" name="sala" id="sala" aria-describedby="salaHelp">
-                        <small id="salaHelp" class="form-text text-muted">Ingresa el nombre de la sala de chat.</small>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>

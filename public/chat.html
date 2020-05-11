@@ -1,26 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
     <title>Sala de Chat | BlockPc</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Sala de Chat</h1>
+<body class="d-flex flex-column h-100">
+    <div class="container mt-1">
         <div class="row">
             <div class="col-12 col-md-4">
-
+                <div class="card chat">
+                    <div class="card-header bg-transparent border-info justify-content-center px-0">
+                        <div class="d-inline">
+                            <img src="/img/blockpc50x25.png" alt="" height="40">
+                            <span class="ml-2" id="usuario-chat"></span>
+                        </div>
+                        <button class="navbar-toggler text-info d-sm-block d-md-none float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="card-body h-100 p-0">
+                        <nav class="navbar navbar-expand-md navbar-dark p-0">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto flex-column" id="lista-usuarios"></ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-md-8">
-
+                <div class="card chat">
+                    <div class="card-header bg-transparent border-info">
+                        <h3>Sala de Chat <small id="sala"> Juegos</small></h3>
+                    </div>
+                    <div class="card-body text-info pl-0" id="messageArea"></div>
+                    <div class="card-footer bg-transparent border-info p-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="messageInput" placeholder="Escribe tu mensaje">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary" id="btnSend"><i class="fas fa-share" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/bce0453467.js" crossorigin="anonymous"></script>
     <script src="socket.io/socket.io.js"></script>
     <script src="js/socket-chat.js"></script>
 </body>
