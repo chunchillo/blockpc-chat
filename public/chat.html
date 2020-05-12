@@ -37,12 +37,16 @@
                     <div class="card-header bg-transparent border-info">
                         <h3>Sala de Chat <small id="sala"> Juegos</small></h3>
                     </div>
-                    <div class="card-body text-info pl-0" id="messageArea"></div>
+                    <div class="card-body text-info p-2" id="messageArea"></div>
                     <div class="card-footer bg-transparent border-info p-0">
+                        <div id="estado"></div>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="messageInput" placeholder="Escribe tu mensaje">
+                            <input type="hidden" name="privado" id="privado">
+                            <input type="text" class="form-control" id="messageInput" placeholder="Escribe tu mensaje" autocomplete="off" autofocus>
                             <div class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary" id="btnSend"><i class="fas fa-share" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline-secondary" id="btnSend">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </div>

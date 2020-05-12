@@ -30,15 +30,21 @@ io.on('connection', (client) => {
             todos: usuarios.todosEnSala(usuario.sala)
         });
     });
+    // Mensajes Publicos
     client.on('enviarMensaje', (data) => {
         let usuario = usuarios.buscarPorId(client.id);
-        let mensaje = crearMensaje(usuario.nombre, data.mensaje);
+        let mensaje = crearMensaje(usuario, data.mensaje);
         client.broadcast.to(usuario.sala).emit('enviarMensaje', mensaje);
     });
     // Escuchar Mensaje Privado
     client.on('mensajePrivado', (data) => {
         let usuario = usuarios.buscarPorId(client.id);
-        let mensaje = crearMensaje(usuario.nombre, data.mensaje);
+        let mensaje = crearMensaje(usuario, data.mensaje);
         client.broadcast.to(data.para).emit('mensajePrivado', mensaje);
+    });
+    // Escuchar solicitu de usuario
+    client.on('obtenerUsuario', (data, callback) => {
+        let usuario = usuarios.buscarPorId(data.id);
+        callback(usuario);
     });
 });

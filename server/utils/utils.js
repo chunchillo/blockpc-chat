@@ -1,7 +1,7 @@
 
-function crearMensaje(nombre, mensaje) {
+function crearMensaje(usuario, mensaje) {
     return {
-        nombre,
+        usuario,
         mensaje,
         fecha: new Date().getTime()
     };
